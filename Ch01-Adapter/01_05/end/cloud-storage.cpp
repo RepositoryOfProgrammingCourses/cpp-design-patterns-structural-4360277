@@ -26,7 +26,7 @@ public:
     int getFreeSpace() override
     {
         // Implement the logic for getting the free space on CloudDrive here.
-        const int size = arc4random_uniform(20);
+        const int size = rand() % 20;
         cout << "Available CloudDrive storage: " << size << "GB" << endl;
         return size;
     }
@@ -43,7 +43,7 @@ public:
 
     int getFreeSpace() override
     {
-        const int size = arc4random_uniform(10);
+        const int size = rand() % 10;
         cout << "Available FastShare storage: " << size << "GB" << endl;
         return size;
     }
@@ -60,7 +60,7 @@ public:
     }
     int usedSpace()
     {
-        return arc4random_uniform(10);
+        return rand() % 10;
     }
     const int totalSpace = 15;
 };
